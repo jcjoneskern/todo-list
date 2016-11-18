@@ -16,9 +16,11 @@
         <ul>
           <li ng-repeat="chore in chores | filter: choreFilter track by $index"><button ng-click="removeChore(chore)">x</button>{{chore}}</li>
         </ul>
-        <input ng-model="choreToAdd" type="text" placeholder="New chore"/>
-        <input id="button" type="submit" value="Add" ng-click="onclick(choreToAdd)"/>
-        <p>Click the <button>x</button> to remove a completed task.</p>
+        <form ng-submit="onclick(choreToAdd)">
+          <input ng-model="choreToAdd" type="text" placeholder="New chore"/>
+          <input id="button" type="submit" value="Add"/>
+          <p>Click the <button>x</button> to remove a completed task.</p>
+        </form>
       </div>
     </div>
   </body>
