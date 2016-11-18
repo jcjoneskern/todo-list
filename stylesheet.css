@@ -1,0 +1,48 @@
+body {
+  font-family: 'Architects Daughter', cursive;
+  text-align: center;
+  background-color: whitesmoke;
+  font-size: 1.2em;
+}
+ul {
+  list-style: none;
+  background-color: #fcf299;
+  width: 50%;
+  text-align: left;
+  margin: 15px auto;
+  padding: 20px 10px;
+  box-shadow: 5px 5px 3px #423c38;
+}
+li {
+  padding: 5px 0;
+}
+#button {
+  margin: 0 5px;
+  color: white;
+  background-color: #5b9b45;
+  border: 0;
+  border-radius: 5px;
+}
+button {
+  margin: 0 5px;
+  color: white;
+  background-color: #961e0c;
+  border: 0;
+  border-radius: 5px;
+}
+#corkboard {
+  width: 30%;
+  min-width: 515px;
+  border: #59402d 30px solid;
+  background-color: #aa8e79;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 5px 5px 3px #423c38, inset 3px 3px 3px #423c38;
+}
+#stickynote {
+  z-index: 10;
+}
+input {
+  box-shadow: 2px 2px 1px #423c38;
+  border: 1px solid #423c38;
+}

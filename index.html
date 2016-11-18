@@ -2,16 +2,24 @@
 <html ng-app="todoModule">
   <head>
     <title>TODO</title>
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script src="script.js"></script>
   </head>
   <body ng-controller="todoController">
-    <h1>To Do List</h1>
-    <input type="text" ng-model="choreFilter" placeholder="Filter" /> <!--filter-->
-    <ul>
-      <li ng-repeat="chore in chores | filter: choreFilter track by $index"><button ng-click="removeChore(chore)">X</button>{{chore}}</li>
-    </ul>
-    <input ng-model="choreToAdd" type="text" placeholder="New chore"/><input type="submit" value="Add" ng-click="onclick(choreToAdd)"/><!--add things ng-click=function()-->
+    <div id="corkboard">
+        <div id="stickynote">
+        <h1>To Do List</h1>
+        <p>Search: <input type="text" ng-model="choreFilter" placeholder="Filter" /></p>
+        <ul>
+          <li ng-repeat="chore in chores | filter: choreFilter track by $index"><button ng-click="removeChore(chore)">x</button>{{chore}}</li>
+        </ul>
+        <input ng-model="choreToAdd" type="text" placeholder="New chore"/>
+        <input id="button" type="submit" value="Add" ng-click="onclick(choreToAdd)"/>
+        <p>Click the <button>x</button> to remove a completed task.</p>
+      </div>
+    </div>
   </body>
 </html>
